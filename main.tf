@@ -7,7 +7,7 @@ resource random_string kong_name {
 
 resource helm_release kong {
   name       = local.name
-  atomic     = true
+  atomic     = false
   repository = var.chart_repository
   chart      = var.chart_name
   version    = var.chart_version
